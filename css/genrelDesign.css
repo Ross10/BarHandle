@@ -1,0 +1,207 @@
+
+
+
+/*organize the main things of the web */
+html
+{
+    min-height: 100%;
+    position: relative;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 2px 2px 16px 5px rgb(46, 77, 117);
+    
+}
+header {
+/*    background-image: url("coctails.jpg");*/
+    margin-bottom: 50px;
+    border-bottom: 2px solid rgb(102, 44, 132);
+}
+
+/*Design of the NAV bar */
+#logo {
+    display: block;
+    padding-bottom: 20px;
+    padding-top: 17px;
+    
+}
+#logo img{
+    width: 100%;
+}
+nav
+{
+    text-align: right;
+    padding: 20px 20px 20px 20px;
+    
+}
+nav a, nav a:focus {
+    line-height: 180px;
+    font-family: 'Ariel',cursive;
+    font-size:25px;
+    height: 180px;
+    padding: 6px 30px 50px 20px;
+    display: inline-block;
+    margin-left: 5px;
+    color: blue;
+    text-decoration: inherit;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    transition: 0.3s all;
+}
+nav a.active, nav a:hover, nav a:active, nav a.active:focus {
+    background: Blue;
+    color: #FFF;
+    text-decoration: inherit;
+}
+nav a[disabled] {
+    background: none;
+    color: #F498B5;
+    text-decoration: inherit;
+    pointer-events:none;
+    cursor: not-allowed;
+}
+
+body
+{ 
+    background-image: url(barr.jpg);
+    background-size: 100%;
+}
+
+/*Design of the footer bar */
+footer
+{
+    margin: 0 -15px;
+    padding: 10px 0px;
+    background: Blue;
+    color: #fff;
+    box-sizing: content-box;
+    font-family: 'Ariel',cursive;
+    font-size: 39px;
+    text-align: center;
+    margin-top: 30px;
+}
+table {width: 100%;}
+th {font-weight: 100;color: blue;}
+
+label {font-weight: 100 !important;color:blue;}
+label input {margin: 0 10px !important;}
+label select {margin: 0 10px !important;}
+
+/*Design of the inputs box ->one big and one small */
+ .inputs {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 #FFF, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 0 1px 0 #FFF, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: #EAE7E7;
+    border: 1px solid #C8C8C8;
+    color: #777;
+    font: 17px Helvetica, Arial, sans-serif;
+    margin: 0 0 10px;
+    padding: 15px;
+    width: 200px;
+    height: 50px;
+    border-spacing:5px;
+}
+.inputs:focus {
+    -webkit-box-shadow: 0 0 2px #ED1C24 inset;
+    -moz-box-shadow: 0 0 2px #ed1c24 inset;
+    -ms-box-shadow: 0 0 2px #ed1c24 inset;
+    -o-box-shadow: 0 0 2px #ed1c24 inset;
+    box-shadow: 0 0 2px #ED1C24 inset;
+    background-color: #FFF;
+    border: 1px solid #ED1C24;
+    outline: none;
+}
+ .smallInputs
+{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 #FFF, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 0 1px 0 #FFF, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: #EAE7E7;
+    border: 1px solid #C8C8C8;
+    color: #777;
+    font: 15px Helvetica, Arial, sans-serif;
+    margin: 0 0 10px;
+    width: 100px;
+    height: 30px;
+    border-spacing:5px;
+}
+.smallInputs:focus {
+    -webkit-box-shadow: 0 0 2px #ED1C24 inset;
+    -moz-box-shadow: 0 0 2px #ed1c24 inset;
+    -ms-box-shadow: 0 0 2px #ed1c24 inset;
+    -o-box-shadow: 0 0 2px #ed1c24 inset;
+    box-shadow: 0 0 2px #ED1C24 inset;
+    background-color: #FFF;
+    border: 1px solid #ED1C24;
+    outline: none;
+}
+
+
+/*Design of the space between the rows in the table */
+/*
+.paddingBetweenRows td
+{
+    padding:0 15px 0 15px;
+}
+*/
+
+/*edit the defulat values of boostrap by our requirements */
+.jumbotron-fluid
+{
+    background: #FFFFFF!important;
+    margin-top: 20px;
+    width:80%;
+}
+.table-hover{
+    font-family:  'Ariel',cursive;
+    font-size: 18px;
+}
+.btn
+{
+    font-size: 25px;
+    font-family:'Sniglet';
+}
+
+/* additions for the web */
+.clearfix:after 
+{
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }

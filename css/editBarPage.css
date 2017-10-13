@@ -1,0 +1,11 @@
+
+
+/*Design of the page of edit wedding info page */
+.editBarDiv
+{
+    font-family: 'Ariel',cursive;
+    font-size: 35px;
+    text-shadow: 4px 4px 4px #aaa;
+    display: none;
+}
+

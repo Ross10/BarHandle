@@ -1,0 +1,23 @@
+
+
+
+/*Design of the new wedding page */
+.newBarDiv
+{
+    font-family:  'Ariel',cursive;
+    font-size: 35px;
+    text-shadow: 4px 4px 4px #aaa;
+    display: none;
+}
+
+/*Design of the  pic new wedding page */
+.couplePic {
+    margin-top: 44px;
+}
+/*Design of the the button of the  new wedding page */
+.buttonStartNewBar
+{
+    text-align: right;
+    font-family: 'Sniglet';
+}
+

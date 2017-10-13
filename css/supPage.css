@@ -1,0 +1,76 @@
+
+
+
+/*orgnize of the sup table */
+.supsTbl
+{
+    width:75%;    
+}
+
+/*orgnize and design of sup page */
+.supDiv
+{    
+    width: 100%;
+    height: 100%;
+    font-family:  'Ariel',cursive;
+    display:none;   
+}
+
+/*design and orgnize of the popUp of the update sup page */
+.popUpSup  
+{
+    width:100%;
+    height:100%;
+    opacity:0.99;
+    top:0;
+    left:0;
+    display:none;
+    position:fixed;
+    background-color:#313131;
+    overflow:auto
+}
+/*Design of the update sup page */
+.updateSupDiv
+{
+    width: 500px;
+    position: fixed;
+    display: none;
+    top: 200px;
+    left: 50%;
+    margin-left: -250px;
+    padding: 10px 50px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-family: raleway;
+    background-color: white;
+    font-family: 'Sniglet';
+    font-size: 18px;
+}
+.updateTitle
+{
+    font-size:25px;
+    background-color: #F8F8F8;
+    padding:20px 35px;
+    margin:-10px -50px;
+    text-align:center;
+    border-radius:10px 10px 0 0
+}
+/*orgnize of the close button on updateSup page */
+.close
+{
+    float: right;
+}
+
+
+
+/*orgnize of the pic on sup page */
+.supPic
+{
+    float: right;
+}
+
+/*white color label for table of sup */
+#whiteLabel
+{
+    color:white;
+}

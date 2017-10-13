@@ -1,0 +1,318 @@
+<!--Itai Russo 301313755 -->
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+    
+  <head>
+        <title>Bar Mangement</title>
+      
+        <!--Import all css needed -->
+        <link href="css/genrelDesign.css" rel="stylesheet" />
+        <link href="css/toDoPage.css" rel="stylesheet" />
+        <link href="css/newBarPage.css" rel="stylesheet" />
+        <link href="css/editBarPage.css" rel="stylesheet" />
+        <link href="css/alcoholDBPrices.css" rel="stylesheet" />
+        <link href="css/supPage.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+
+        <!--Import Fonts -->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sniglet">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>  
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One|Fredericka+the+Great' rel='stylesheet' type='text/css'>
+      
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        
+        <!-- import scripts and load the main script -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+        <script type = "text/javascript" src = "barJ.js"></script>
+        <script src="sweetalert.min.js"></script> 
+       
+        <script>$(document).ready(loadPage); </script>
+
+  </head>
+    
+    <body>
+        <!-- container -->
+        <div class="container">
+            <!-- nav bar,uses boostrap and logo -->
+            <header class="row">
+                <div class="col-md-5">
+                    <a href="#" id="logo"><img src="pic/logohi.jpg" alt="logo"></a>
+                </div>
+                <div class="col-md-7">
+                    <nav>
+                        <a href="#" id="cmdNew">New</a>
+                        <a href="#" id="cmdTodo">To Do</a>
+                        <a href="#" id="cmdPricing">Pricing Dic</a>
+                        <a href="#" id="cmdSup">Suppliers</a>
+                    </nav>
+                </div>
+            </header>
+            
+            
+            <!-- 1-start*************screen of the new Bar add *************-->
+            
+            <!-- create 3 div class(tblNewWedding,couplePic,buttonStart) for section the page--->    
+           <div class=newBarDiv id="newBarDiv"> 
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-1">
+                        <table class='text-right'><!-- table for the form to add a new couple-->
+                          <tr>
+                            <td>Bar Name:</td>
+                            <td><input type="text" class="inputs" id="barNameId" ></td>
+                          </tr>
+                          <tr>
+                            <td>Owner Name:</td>
+                            <td><input type="text" class="inputs" id="OwnerNameId" ></td> 
+                          </tr>
+                            <tr>
+                            <td>Location:</td>
+                            <td><input type="text" class="inputs" id="locationId"></td>
+                          </tr>
+                        </table>
+                        <div class=buttonStartNewBar><button class="btn btn-default btn-lg" type="submit" id = "cmdAddNewBar">Lets start!</button></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class=editPic> <img src="pic/collage-2017-03-14.png" height=350 width=470></div>
+                     
+                    </div>
+                </div> 
+            </div>
+            
+            <!-- 1-end*************END of scrren new Bar add *************-->    
+
+            
+
+            
+             <!-- 2-start*************screen of updateBar details *************-->
+
+            <div class=editBarDiv id="editBarDiv"> 
+                
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-1">
+                        <table class='text-right' id="tblEditBarDeatils"><!-- table for the form to add a new barName-->
+                            <tr>
+                              <td>Bar Name:</td>
+                              <td><input type="text" class="inputs" id="BarNameIdUpdate" ></td>
+                            </tr>
+
+                            <tr>
+                              <td>Owner Name:</td>
+                              <td><input type="text" class="inputs" id="OwnerNameIdUpdate" ></td>
+                            </tr>
+
+                            <tr>
+                              <td>Location:</td>
+                              <td><input type="text" class="inputs" id="locationIdUpdate"></td>
+                            </tr>      
+                        </table>
+                        <div class="text-right">
+                            <button type="submit"  class="btn btn-primary btn-lg" id = "cmdUpdateBarName">Upadte</button>
+                            <button type="submit"  class="btn btn-warning btn-lg" id = "createNewBarName">Create new Bar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class=editPic> <img src="pic/collage-2017-03-14.png" height=350 width=470></div>
+                    </div>
+                </div> 
+          </div> 
+            
+         <!-- 2-end*************END of screen of updateBar details *************-->
+
+            
+        
+         
+        <!-- 3-start-****************screen of Todo page  ************************-->
+              
+            <div class=primaryDiv id="primaryDiv">
+            
+                <div class="row">
+                    <div class="col-md-5">
+                        <!-- class for the labels- take the names of bar and additional details about the bar and initliaze them in the js-->
+                        <div class=titles id="titles">
+            
+                            <h3 id="barName"></h3>
+                            <h3 id="locLabel"></h3>
+                            <h3 id="remainMissionLabel"></h3>
+                        </div>
+
+                        <button id = "cmdAddMission" class="btn btn-primary btn-lg">Add Mission!</button>
+                    </div>
+                    <div class="col-md-7">
+                        <!-- Table for the primary page,generl missions for the bar-->
+                       <table class='table table-hover' id='missionTbl'>
+                           <thead>
+                               <tr>
+                                <th>#</th>
+                                <th>Mission</th>
+                                <th>is complete</th> 
+                                <th>delete</th> 
+                              </tr>
+                           </thead>
+                       </table>
+                    </div>
+                </div>
+               
+          </div>
+    
+         <!-- 3-end-****************END of screen of Todo page  ************************-->
+
+            
+            
+            
+    
+            
+         <!-- 4-start-****************  screen of pricing page  ***************************-->
+
+             <div class=pricingDiv id="pricingDiv"> 
+                <h2 id = "pricesDb">Pub DB & Prices : </h2>
+
+                 <div class=pricingLbls> <!--class for organize the screen-->
+                        <!--inputs box with label for the space between them-->
+                       <label for="productName"> Name: <input type="text"  class="smallInputs" id="productName" ></label>
+                       <label for="productPrice"> Price: <input type="text"  class="smallInputs" id="productPrice" ></label>
+                       <label id="marginLabel"> <button id = "cmdAddProduct" class="btn btn-primary">ADD</button></label>
+                </div>
+                 <div id="searchplace">
+                       <label for="searchProduct"> Search: <input type="text"  class="smallInputs" id="searchProduct" ></label>
+                 
+                 </div>
+                  
+              
+             <!--class for the gray background to the pricing table-->
+                <div class="jumbotron jumbotron-fluid">
+                    <h2>Price Menu</h2>
+                    <div class=pricingTblDiv>
+                       <table class="table table-hover" id="pricingTbl">
+                            <tr>
+                               <td>#</td>
+                               <td>Name</td>
+                                <td>price</td> 
+                                <td>Delete</td> 
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+              </div>
+            
+        <!-- 4-end -****************  screen of pricing page  ***************************-->
+
+            
+            
+        <!-- 5-start -****************  screen of Supllires page  ***************************-->
+             <div class=supDiv id="supDiv">
+                <label for="mySelect">
+                    Expenditure for: 
+                    <!-- select for all  the sup*-->
+                    <select id="mySelect" class="smallInputs">
+                        <option>DJ</option>
+                        <option>Photographer company</option>
+                        <option>Soft Drinks </option>
+                        <option>Snacks</option>
+                        <option>Alcohol Drinks</option>
+                        <option>Beers</option>
+                        <option>security guards company</option>
+                        <option>Cleaning company</option>
+                    </select>
+                </label>
+
+                <!-- inputBox for all  the sup-->
+                <label for="supName">
+                    Supplier name: 
+                    <!-- select for all the sup-->
+                    <input type="text" class="smallInputs" id="supName">
+                </label>
+                <label for="supName">
+                    Price: 
+                    <input type="text" class="smallInputs" id="amount">
+                </label>
+                <label for="supName">
+                    Paid: 
+                    <input type="text" class="smallInputs" id="paid">
+                </label>
+                <label id="marginLabel"><button type="submit" class="btn btn-primary" id = "cmdAddSup">ADD sup</button></label>
+                <div class=supPic></div>
+                 <!-- div class for the gray background of sup table-->
+                <div class="jumbotron jumbotron-fluid">
+                    <div class=supsTbl id="supsTbl">
+                        <table class="table table-hover" id="supTbl">
+                             <tr>
+                                <td>#</td>
+                                <td>Expenditure for</td>
+                                <td>Supplier name</td> 
+                                <td>price to pay</td> 
+                                <td>Paid</td> 
+                                <td>Remaining</td> 
+                                <td></td> 
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            
+           <!-- 5-end -****************  END screen of sup  page  ***************************-->
+
+            
+            
+        
+            
+           <!-- 6-start -**************** screen of  the UpdateSup  page  ***************************-->
+          
+           <!-- div popUpSup put black bakground and updateSupDiv div upload the update form -->
+          <div class=popUpSup id="popUpSup">
+
+              <div class=updateSupDiv id="updateSupDiv">
+                 <!-- put the close button in right of form page -->
+                  <div class=close><button id = "closePopUp" class="btn btn-default btn-lg">Close</button></div>
+                  
+                  <!-- updateForm div make the form design -->
+                  <div class=updateTitle id="updateForm">Update supplier</div> <br><br>
+                  
+                 <!-- Table for the updateSup page -->
+                  <table class='paddingBetweenRows' class="smallInputs" id="tblUpdateSup">
+                        <tr>
+                          <td>Supplier name </td>
+                        <td><input type="text" class="smallInputs" id="supplierNameUpdate" ></td>
+                        </tr>
+                      
+                        <tr>
+                            <td>Amount:</td>
+                            <td><input type="text" class="smallInputs" id="amountUpdate" ></td>
+                        </tr>
+
+                        <tr>
+                            <td>Paid</td>
+                            <td><input type="text"  class="smallInputs" id="paidUpdate" ></td>
+                        </tr>
+
+                         <tr>  
+                             <td><label id="whiteLabel">dd</label></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>  
+                            <td></td>
+                            <td></td>
+                        </tr>
+                 </table>  
+                 <br><br>
+            </div>       
+          </div>
+
+
+            
+            <!-- 6-end -**************** END of screen the UpdateSup  page  ***************************-->
+            <div class="clearfix"></div>
+            <footer>By Itai's : Russo & Gabai</footer>
+        </div>
+        <!-- end container  -->
+               
+   </body>
+</html>

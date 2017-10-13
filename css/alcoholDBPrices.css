@@ -1,0 +1,42 @@
+
+
+/*orgnize places on guests page */
+.pricingTblDiv
+{
+    width:80%;    
+}
+
+.guestsPic
+{
+    width:30%;
+    float: right;
+}
+
+/*Design of the guests page */
+.pricingDiv
+{
+    width: 100%;
+    height: 100%;
+    font-family: 'Ariel',cursive;
+    font-size:25px;
+    display:none;
+}
+.pricingLbls {
+    margin-bottom: 20px;
+    margin-left: 150px;
+    
+}
+/*space between lables */
+#marginLabel
+{
+    margin-left:20px;
+}
+#searchplace{
+    margin-left: 250px;
+}
+#pricesDb{
+    margin-left: 250px;
+    font-size: 35px;
+}
+
+
